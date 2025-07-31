@@ -1,12 +1,12 @@
 package br.com.dio.ui.custom.button;
 
-import javax.swing.*;
+import javax.swing.JButton;
 import java.awt.event.ActionListener;
 
 public class ResetButton extends JButton {
 
-    public ResetButton(final ActionListener actionListener) {
-        this.setText("Reset game");
+    public ResetButton(final ActionListener actionListener){
+        this.setText("Reiniciar jogo");
         this.addActionListener(actionListener);
     }
 

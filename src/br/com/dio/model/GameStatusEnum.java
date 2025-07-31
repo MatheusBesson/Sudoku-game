@@ -2,9 +2,9 @@ package br.com.dio.model;
 
 public enum GameStatusEnum {
 
-    NON_STARTED ("Not started"),
-    INCOMPLETE ("Incompleted"),
-    COMPLETE ("Completed");
+    NON_STARTED("não iniciado"),
+    INCOMPLETE("incompleto"),
+    COMPLETE("completo");
 
     private String label;
 

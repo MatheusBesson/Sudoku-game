@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-// to API, GRAPHIC INTERFACE, TERMINAL
 public class BoardService {
+
     private final static int BOARD_LIMIT = 9;
 
     private final Board board;
@@ -18,28 +18,28 @@ public class BoardService {
         this.board = new Board(initBoard(gameConfig));
     }
 
-    public List<List<Space>> getSpaces() {
-        return this.board.getSpaces();
+    public List<List<Space>> getSpaces(){
+        return board.getSpaces();
     }
 
-    public void reset() {
-        this.board.reset();
+    public void reset(){
+        board.reset();
     }
-    // use this if you want to (doesn't necessary needs it)
-    public boolean hasErrors() {
+
+    public boolean hasErrors(){
         return board.hasErrors();
     }
 
-    public GameStatusEnum getStatus() {
+    public GameStatusEnum getStatus(){
         return board.getStatus();
     }
 
-    public boolean gameIsFinished() {
+    public boolean gameIsFinished(){
         return board.gameIsFinished();
     }
 
     private List<List<Space>> initBoard(final Map<String, String> gameConfig) {
-                List<List<Space>> spaces = new ArrayList<>();
+        List<List<Space>> spaces = new ArrayList<>();
         for (int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
             for (int j = 0; j < BOARD_LIMIT; j++) {
@@ -50,6 +50,7 @@ public class BoardService {
                 spaces.get(i).add(currentSpace);
             }
         }
+
         return spaces;
     }
 }
